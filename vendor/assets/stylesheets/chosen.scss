@@ -2,9 +2,6 @@
 @import "compass/css3/images";
 @import "compass/css3/user-interface";
 
-$chosen-sprite: image-url('chosen-sprite.png') !default;
-$chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
-
 /* @group Base */
 .chosen-container {
   position: relative;
@@ -92,7 +89,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     display: block;
     width: 12px;
     height: 12px;
-    background: $chosen-sprite -42px 1px no-repeat;
+    background: image-url('chosen-sprite.png') -42px 1px no-repeat;
     font-size: 1px;
     &:hover {
       background-position: -42px -10px;
@@ -112,7 +109,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       display: block;
       width: 100%;
       height: 100%;
-      background: $chosen-sprite no-repeat 0px 2px;
+      background: image-url('chosen-sprite.png') no-repeat 0px 2px;
     }
   }
   .chosen-search {
@@ -128,8 +125,8 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       height: auto;
       outline: 0;
       border: 1px solid #aaa;
-      background: #fff $chosen-sprite no-repeat 100% -20px;
-      @include background($chosen-sprite no-repeat 100% -20px);
+      background: #fff image-url('chosen-sprite.png') no-repeat 100% -20px;
+      // @include background(image-url('chosen-sprite.png') no-repeat 100% -20px);
       font-size: 1em;
       font-family: sans-serif;
       line-height: normal;
@@ -177,7 +174,8 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     }
     &.highlighted {
       background-color: #3875d7;
-      @include background-image(linear-gradient(#3875d7 20%, #2a62bc 90%));
+      @include background(linear-gradient(#3875d7 20%, #2a62bc 90%));
+      //@include background(linear-gradient(#3875d7 20%, #2a62bc 90%));
       color: #fff;
     }
     &.no-results {
@@ -213,7 +211,8 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     height: 1%;
     border: 1px solid #aaa;
     background-color: #fff;
-    @include background-image(linear-gradient(#eee 1%, #fff 15%));
+    @include background(linear-gradient(#eee 1%, #fff 15%));
+    // @include background(linear-gradient(#eee 1%, #fff 15%));
     cursor: text;
   }
   .chosen-choices li {
@@ -246,7 +245,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       max-width: 100%;
       border-radius: 3px;
       background-color: #eeeeee;
-      @include background-image(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
+      @include background(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
       background-size: 100% 19px;
       background-repeat: repeat-x;
       background-clip: padding-box;
@@ -264,7 +263,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
         display: block;
         width: 12px;
         height: 12px;
-        background: $chosen-sprite -42px 1px no-repeat;
+        background: image-url('chosen-sprite.png') -42px 1px no-repeat;
         font-size: 1px;
         &:hover {
           background-position: -42px -10px;
@@ -275,7 +274,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       padding-right: 5px;
       border: 1px solid #ccc;
       background-color: #e4e4e4;
-      @include background-image(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
+      @include background(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
       color: #666;
     }
     &.search-choice-focus {
@@ -310,7 +309,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       border-bottom-right-radius: 0;
       -moz-border-radius-bottomleft: 0;
       border-bottom-left-radius: 0;
-      @include background-image(linear-gradient(#eee 20%, #fff 80%));
+      @include background(linear-gradient(#eee 20%, #fff 80%));
       box-shadow: 0 1px 0 #fff inset;
     }
     .chosen-single div {
@@ -398,8 +397,8 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   }
   .chosen-search input[type="text"] {
     padding: 4px 5px 4px 20px;
-    background: #fff $chosen-sprite no-repeat -30px -20px;
-    @include background($chosen-sprite no-repeat -30px -20px);
+    background: #fff image-url('chosen-sprite.png') no-repeat -30px -20px;
+    // @include background($chosen-sprite no-repeat -30px -20px);
     direction: rtl;
   }
   &.chosen-container-single{
@@ -425,7 +424,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   .chosen-container-multi .chosen-choices .search-choice .search-choice-close,
   .chosen-container .chosen-results-scroll-down span,
   .chosen-container .chosen-results-scroll-up span {
-    background-image: $chosen-sprite-retina !important;
+    background-image: image-url('chosen-sprite@2x.png') !important;
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important;
   }
